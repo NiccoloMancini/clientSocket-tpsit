@@ -14,7 +14,7 @@ public class Main {
         System.out.println("il client si è collegato");
         BufferedReader in = new BufferedReader(new InputStreamReader(s.getInputStream()));
         DataOutputStream out = new DataOutputStream(s.getOutputStream());
-        out.writeBytes("ciaoo");
+        out.writeBytes("ciaoo\n");
         String stringaRicevuta = in.readLine();
         System.out.println("la stringa ricevuta: " + stringaRicevuta);
         
