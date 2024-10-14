@@ -22,10 +22,14 @@ public class Main {
             System.out.print("inserire la stringa (! per terminare la connesione): ");
             stringaScritta = scanner.nextLine();
             out.writeBytes(stringaScritta + "\n");
+            if (!stringaScritta.equals("!")) {
+                System.out.print("la stringa ricevuta: ");
+            }
             stringaRicevuta = in.readLine();
-            System.out.println("la stringa ricevuta: " + stringaRicevuta);
+            System.out.println(stringaRicevuta);
         } while (!stringaScritta.equals("!"));
         
         s.close();
+        scanner.close();
     }
 }
